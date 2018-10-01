@@ -76,7 +76,7 @@ describe FastJsonapi::ObjectSerializer do
       expect(serializable_hash['data']).to eq nil
     end
 
-    it 'returns correct json with random id when record id is nil' do
+    it 'returns correct json with random int when record id is nil' do
       movie.id = nil
       json = MovieSerializer.new(movie).serialized_json
       serializable_hash = JSON.parse(json)
